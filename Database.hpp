@@ -39,10 +39,11 @@ namespace ECE141 {
 	
 	/* Load Data */
 	StatusResult loadEntities();
-	
+	StatusResult loadRows();
   protected:
 	Storage 		theStorage;
 	EntityList		DBEntities;
+	RowCollection theRows;
 	Helpers 		theHelp;
 	std::string     name;
 	std::string 	theDBPath;

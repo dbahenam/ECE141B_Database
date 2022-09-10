@@ -18,13 +18,13 @@
 namespace ECE141 {
 
   //Row::Row(uint32_t entityId) {}
-  Row::Row(const Row &aRow) {*this=aRow;}
+  Row::Row(const Row &aCopy) {*this=aCopy;}
 
   Row::~Row() {}
 
-  Row& Row::operator=(const Row &aRow) {
-	entityName = aRow.entityName;
-	for(const auto & thePair : aRow.data){
+  Row& Row::operator=(const Row &aCopy) {
+	entityName = aCopy.entityName;
+	for(const auto & thePair : aCopy.data){
 	  data[thePair.first] = thePair.second;
 	}
 	return *this;

@@ -81,10 +81,6 @@ namespace ECE141 {
 		attributes.push_back(anAttr);
 	  }
 	}
-
-    std::string decode() {
-	  return "1";
-    }
 	AttributeList   attributes;
 	size_t getNumAttributes();
   protected:

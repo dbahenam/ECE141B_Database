@@ -21,7 +21,7 @@ namespace ECE141 {
 	if(!fs::exists(thePath)){
 		theDBPath = thePath;
 	}
-	stream.clear(); // clear flags
+	//stream.clear(); // clear flags
 	stream.open(theDBPath.c_str(), std::ios::binary | std::ios::in | std::ios::out | std::ios::trunc);
 	stream.seekg(0, std::ios::end);
 	//std::cout << "filesize at create: " << stream.tellg();
@@ -31,9 +31,8 @@ namespace ECE141 {
 
   Database::Database(const std::string aName, OpenDB)
     : name(aName), theStorage(stream), changed(false) {
-      
-      std::string thePath = Config::getDBPath(name);
-	  stream.open(thePath.c_str(), std::ios::binary | std::ios::in | std::ios::out);
+      theDBPath = Config::getDBPath(name);
+	  stream.open(theDBPath.c_str(), std::ios::binary | std::ios::in | std::ios::out);
 	  stream.seekg(0, std::ios::beg);
 	  loadEntities();
   }
@@ -46,12 +45,28 @@ namespace ECE141 {
   StatusResult Database::loadEntities(){
 	StatusResult theResult{noError};
 	int count = 0;
-	std::cout << "the number of blocks: " << theStorage.storageBlocks.size() << "\n";
 	Block theBlock;
+	Entity theEntity;
+	
+	Row theRow;
+	std::stringstream aStream;
+	/* load data for storage */
 	while(count < theStorage.getBlockCount()){
 	  theStorage.readBlock(count, theBlock);
+	  theStorage.storageBlocks.push_back(theBlock);
+	  aStream.write(theBlock.payload, sizeof(theBlock));
+	  if(theBlock.header.type == 'E'){
+		theEntity.decode(aStream);
+		DBEntities.push_back(theEntity);
+	  }
+	  else if(theBlock.header.type == 'D'){
+		theRow.decode(aStream);
+		theRows.push_back(std::unique_ptr<Row>(new Row(theRow)));
+	  }
+	  aStream.str("");
 	  count++;
 	}
+	
 	return theResult;
   }
   StatusResult Database::createTable(Entity &anEntity){

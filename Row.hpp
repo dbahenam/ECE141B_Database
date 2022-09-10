@@ -24,10 +24,7 @@ namespace ECE141 {
   class Row  {
   public:
 	Row() : entityName("empty")  {}
-    //Row(uint32_t entityId=0);
-    Row(const Row &aRow);
-   // Row(const Attribute &anAttribute); //maybe?
-    
+    Row(const Row &aCopy);
     ~Row();
     
     Row& operator=(const Row &aRow);
@@ -41,8 +38,6 @@ namespace ECE141 {
         
     KeyValues&          getData() {return data;}
 	void				clearData(){data.clear();}
-    //uint32_t            entityId; //hash value of entity?
-	//uint32_t            blockNumber;
 	
 	StatusResult mapKeyValue(StringList &aStrList, ValueList &aValueList);
 	void		 encode(std::ostream& aStream);
@@ -53,7 +48,6 @@ namespace ECE141 {
   };
 
   //-------------------------------------------
-
   using RowCollection = std::vector<std::unique_ptr<Row>>;
   using RowList = std::vector<Row>;
 
