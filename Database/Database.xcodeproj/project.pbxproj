@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		515CFE8928CC199100861D32 /* DBQuery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE4E28CC199100861D32 /* DBQuery.cpp */; };
+		515CFE8A28CC199100861D32 /* CmdProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE5728CC199100861D32 /* CmdProcessor.cpp */; };
+		515CFE8B28CC199100861D32 /* Attribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE5C28CC199100861D32 /* Attribute.cpp */; };
+		515CFE8C28CC199100861D32 /* TokenSequencer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE5D28CC199100861D32 /* TokenSequencer.cpp */; };
+		515CFE8D28CC199100861D32 /* Statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE5F28CC199100861D32 /* Statement.cpp */; };
+		515CFE8E28CC199100861D32 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE6228CC199100861D32 /* makefile */; };
+		515CFE8F28CC199100861D32 /* SQLProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE6328CC199100861D32 /* SQLProcessor.cpp */; };
+		515CFE9028CC199100861D32 /* Faked.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE6428CC199100861D32 /* Faked.cpp */; };
+		515CFE9128CC199100861D32 /* Filters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE6528CC199100861D32 /* Filters.cpp */; };
+		515CFE9228CC199100861D32 /* Storage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE6828CC199100861D32 /* Storage.cpp */; };
+		515CFE9328CC199100861D32 /* Index.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE6928CC199100861D32 /* Index.cpp */; };
+		515CFE9428CC199100861D32 /* BlockIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE6C28CC199100861D32 /* BlockIO.cpp */; };
+		515CFE9528CC199100861D32 /* DBProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE7028CC199100861D32 /* DBProcessor.cpp */; };
+		515CFE9628CC199100861D32 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE7428CC199100861D32 /* main.cpp */; };
+		515CFE9728CC199100861D32 /* DBStatements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE7828CC199100861D32 /* DBStatements.cpp */; };
+		515CFE9828CC199100861D32 /* Tokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE7928CC199100861D32 /* Tokenizer.cpp */; };
+		515CFE9928CC199100861D32 /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE7A28CC199100861D32 /* Entity.cpp */; };
+		515CFE9A28CC199100861D32 /* SQLStatements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE7B28CC199100861D32 /* SQLStatements.cpp */; };
+		515CFE9B28CC199100861D32 /* Row.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE8328CC199100861D32 /* Row.cpp */; };
+		515CFE9C28CC199100861D32 /* ParseHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE8528CC199100861D32 /* ParseHelper.cpp */; };
+		515CFE9D28CC199100861D32 /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE8628CC199100861D32 /* Database.cpp */; };
+		515CFE9E28CC199100861D32 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 515CFE8828CC199100861D32 /* Application.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		515CFE4128CC198200861D32 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		515CFE4328CC198200861D32 /* Database */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Database; sourceTree = BUILT_PRODUCTS_DIR; };
+		515CFE4D28CC199100861D32 /* DBQuery.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DBQuery.hpp; path = ../DBQuery.hpp; sourceTree = "<group>"; };
+		515CFE4E28CC199100861D32 /* DBQuery.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DBQuery.cpp; path = ../DBQuery.cpp; sourceTree = "<group>"; };
+		515CFE4F28CC199100861D32 /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Application.hpp; path = ../Application.hpp; sourceTree = "<group>"; };
+		515CFE5028CC199100861D32 /* Compare.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Compare.hpp; path = ../Compare.hpp; sourceTree = "<group>"; };
+		515CFE5128CC199100861D32 /* BlockIO.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BlockIO.hpp; path = ../BlockIO.hpp; sourceTree = "<group>"; };
+		515CFE5228CC199100861D32 /* Scanner.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Scanner.hpp; path = ../Scanner.hpp; sourceTree = "<group>"; };
+		515CFE5328CC199100861D32 /* Helpers.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Helpers.hpp; path = ../Helpers.hpp; sourceTree = "<group>"; };
+		515CFE5428CC199100861D32 /* TestManually.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TestManually.hpp; path = ../TestManually.hpp; sourceTree = "<group>"; };
+		515CFE5528CC199100861D32 /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Entity.hpp; path = ../Entity.hpp; sourceTree = "<group>"; };
+		515CFE5628CC199100861D32 /* SQLStatements.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SQLStatements.hpp; path = ../SQLStatements.hpp; sourceTree = "<group>"; };
+		515CFE5728CC199100861D32 /* CmdProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CmdProcessor.cpp; path = ../CmdProcessor.cpp; sourceTree = "<group>"; };
+		515CFE5828CC199100861D32 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		515CFE5928CC199100861D32 /* Index.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Index.hpp; path = ../Index.hpp; sourceTree = "<group>"; };
+		515CFE5A28CC199100861D32 /* ValueType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValueType.h; path = ../ValueType.h; sourceTree = "<group>"; };
+		515CFE5B28CC199100861D32 /* Faked.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Faked.hpp; path = ../Faked.hpp; sourceTree = "<group>"; };
+		515CFE5C28CC199100861D32 /* Attribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Attribute.cpp; path = ../Attribute.cpp; sourceTree = "<group>"; };
+		515CFE5D28CC199100861D32 /* TokenSequencer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TokenSequencer.cpp; path = ../TokenSequencer.cpp; sourceTree = "<group>"; };
+		515CFE5E28CC199100861D32 /* keywords.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = keywords.hpp; path = ../keywords.hpp; sourceTree = "<group>"; };
+		515CFE5F28CC199100861D32 /* Statement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Statement.cpp; path = ../Statement.cpp; sourceTree = "<group>"; };
+		515CFE6028CC199100861D32 /* TestSequencer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TestSequencer.hpp; path = ../TestSequencer.hpp; sourceTree = "<group>"; };
+		515CFE6128CC199100861D32 /* AboutUs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AboutUs.hpp; path = ../AboutUs.hpp; sourceTree = "<group>"; };
+		515CFE6228CC199100861D32 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = makefile; path = ../makefile; sourceTree = "<group>"; };
+		515CFE6328CC199100861D32 /* SQLProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SQLProcessor.cpp; path = ../SQLProcessor.cpp; sourceTree = "<group>"; };
+		515CFE6428CC199100861D32 /* Faked.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Faked.cpp; path = ../Faked.cpp; sourceTree = "<group>"; };
+		515CFE6528CC199100861D32 /* Filters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Filters.cpp; path = ../Filters.cpp; sourceTree = "<group>"; };
+		515CFE6628CC199100861D32 /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Timer.hpp; path = ../Timer.hpp; sourceTree = "<group>"; };
+		515CFE6728CC199100861D32 /* TokenSequencer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TokenSequencer.hpp; path = ../TokenSequencer.hpp; sourceTree = "<group>"; };
+		515CFE6828CC199100861D32 /* Storage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Storage.cpp; path = ../Storage.cpp; sourceTree = "<group>"; };
+		515CFE6928CC199100861D32 /* Index.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Index.cpp; path = ../Index.cpp; sourceTree = "<group>"; };
+		515CFE6A28CC199100861D32 /* Constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Constants.hpp; path = ../Constants.hpp; sourceTree = "<group>"; };
+		515CFE6B28CC199100861D32 /* Errors.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Errors.hpp; path = ../Errors.hpp; sourceTree = "<group>"; };
+		515CFE6C28CC199100861D32 /* BlockIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BlockIO.cpp; path = ../BlockIO.cpp; sourceTree = "<group>"; };
+		515CFE6D28CC199100861D32 /* FolderView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FolderView.hpp; path = ../FolderView.hpp; sourceTree = "<group>"; };
+		515CFE6E28CC199100861D32 /* SQLProcessor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SQLProcessor.hpp; path = ../SQLProcessor.hpp; sourceTree = "<group>"; };
+		515CFE6F28CC199100861D32 /* Row.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Row.hpp; path = ../Row.hpp; sourceTree = "<group>"; };
+		515CFE7028CC199100861D32 /* DBProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DBProcessor.cpp; path = ../DBProcessor.cpp; sourceTree = "<group>"; };
+		515CFE7128CC199100861D32 /* Config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Config.hpp; path = ../Config.hpp; sourceTree = "<group>"; };
+		515CFE7228CC199100861D32 /* Attribute.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Attribute.hpp; path = ../Attribute.hpp; sourceTree = "<group>"; };
+		515CFE7328CC199100861D32 /* Tokenizer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Tokenizer.hpp; path = ../Tokenizer.hpp; sourceTree = "<group>"; };
+		515CFE7428CC199100861D32 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../main.cpp; sourceTree = "<group>"; };
+		515CFE7528CC199100861D32 /* Statement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Statement.hpp; path = ../Statement.hpp; sourceTree = "<group>"; };
+		515CFE7628CC199100861D32 /* DBProcessor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DBProcessor.hpp; path = ../DBProcessor.hpp; sourceTree = "<group>"; };
+		515CFE7728CC199100861D32 /* TestAutomatic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TestAutomatic.hpp; path = ../TestAutomatic.hpp; sourceTree = "<group>"; };
+		515CFE7828CC199100861D32 /* DBStatements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DBStatements.cpp; path = ../DBStatements.cpp; sourceTree = "<group>"; };
+		515CFE7928CC199100861D32 /* Tokenizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Tokenizer.cpp; path = ../Tokenizer.cpp; sourceTree = "<group>"; };
+		515CFE7A28CC199100861D32 /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Entity.cpp; path = ../Entity.cpp; sourceTree = "<group>"; };
+		515CFE7B28CC199100861D32 /* SQLStatements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SQLStatements.cpp; path = ../SQLStatements.cpp; sourceTree = "<group>"; };
+		515CFE7C28CC199100861D32 /* FolderReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FolderReader.hpp; path = ../FolderReader.hpp; sourceTree = "<group>"; };
+		515CFE7D28CC199100861D32 /* DBStatements.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DBStatements.hpp; path = ../DBStatements.hpp; sourceTree = "<group>"; };
+		515CFE7E28CC199100861D32 /* BasicTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BasicTypes.hpp; path = ../BasicTypes.hpp; sourceTree = "<group>"; };
+		515CFE7F28CC199100861D32 /* Filters.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Filters.hpp; path = ../Filters.hpp; sourceTree = "<group>"; };
+		515CFE8028CC199100861D32 /* CmdProcessor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CmdProcessor.hpp; path = ../CmdProcessor.hpp; sourceTree = "<group>"; };
+		515CFE8128CC199100861D32 /* Storage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Storage.hpp; path = ../Storage.hpp; sourceTree = "<group>"; };
+		515CFE8228CC199100861D32 /* View.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = View.hpp; path = ../View.hpp; sourceTree = "<group>"; };
+		515CFE8328CC199100861D32 /* Row.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Row.cpp; path = ../Row.cpp; sourceTree = "<group>"; };
+		515CFE8428CC199100861D32 /* Database.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Database.hpp; path = ../Database.hpp; sourceTree = "<group>"; };
+		515CFE8528CC199100861D32 /* ParseHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParseHelper.cpp; path = ../ParseHelper.cpp; sourceTree = "<group>"; };
+		515CFE8628CC199100861D32 /* Database.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Database.cpp; path = ../Database.cpp; sourceTree = "<group>"; };
+		515CFE8728CC199100861D32 /* ParseHelper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ParseHelper.hpp; path = ../ParseHelper.hpp; sourceTree = "<group>"; };
+		515CFE8828CC199100861D32 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Application.cpp; path = ../Application.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		515CFE4028CC198200861D32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		515CFE3A28CC198200861D32 = {
+			isa = PBXGroup;
+			children = (
+				515CFE6128CC199100861D32 /* AboutUs.hpp */,
+				515CFE8828CC199100861D32 /* Application.cpp */,
+				515CFE4F28CC199100861D32 /* Application.hpp */,
+				515CFE5C28CC199100861D32 /* Attribute.cpp */,
+				515CFE7228CC199100861D32 /* Attribute.hpp */,
+				515CFE7E28CC199100861D32 /* BasicTypes.hpp */,
+				515CFE6C28CC199100861D32 /* BlockIO.cpp */,
+				515CFE5128CC199100861D32 /* BlockIO.hpp */,
+				515CFE5728CC199100861D32 /* CmdProcessor.cpp */,
+				515CFE8028CC199100861D32 /* CmdProcessor.hpp */,
+				515CFE5028CC199100861D32 /* Compare.hpp */,
+				515CFE7128CC199100861D32 /* Config.hpp */,
+				515CFE6A28CC199100861D32 /* Constants.hpp */,
+				515CFE8628CC199100861D32 /* Database.cpp */,
+				515CFE8428CC199100861D32 /* Database.hpp */,
+				515CFE7028CC199100861D32 /* DBProcessor.cpp */,
+				515CFE7628CC199100861D32 /* DBProcessor.hpp */,
+				515CFE4E28CC199100861D32 /* DBQuery.cpp */,
+				515CFE4D28CC199100861D32 /* DBQuery.hpp */,
+				515CFE7828CC199100861D32 /* DBStatements.cpp */,
+				515CFE7D28CC199100861D32 /* DBStatements.hpp */,
+				515CFE7A28CC199100861D32 /* Entity.cpp */,
+				515CFE5528CC199100861D32 /* Entity.hpp */,
+				515CFE6B28CC199100861D32 /* Errors.hpp */,
+				515CFE6428CC199100861D32 /* Faked.cpp */,
+				515CFE5B28CC199100861D32 /* Faked.hpp */,
+				515CFE6528CC199100861D32 /* Filters.cpp */,
+				515CFE7F28CC199100861D32 /* Filters.hpp */,
+				515CFE7C28CC199100861D32 /* FolderReader.hpp */,
+				515CFE6D28CC199100861D32 /* FolderView.hpp */,
+				515CFE5328CC199100861D32 /* Helpers.hpp */,
+				515CFE6928CC199100861D32 /* Index.cpp */,
+				515CFE5928CC199100861D32 /* Index.hpp */,
+				515CFE5E28CC199100861D32 /* keywords.hpp */,
+				515CFE7428CC199100861D32 /* main.cpp */,
+				515CFE6228CC199100861D32 /* makefile */,
+				515CFE8528CC199100861D32 /* ParseHelper.cpp */,
+				515CFE8728CC199100861D32 /* ParseHelper.hpp */,
+				515CFE5828CC199100861D32 /* README.md */,
+				515CFE8328CC199100861D32 /* Row.cpp */,
+				515CFE6F28CC199100861D32 /* Row.hpp */,
+				515CFE5228CC199100861D32 /* Scanner.hpp */,
+				515CFE6328CC199100861D32 /* SQLProcessor.cpp */,
+				515CFE6E28CC199100861D32 /* SQLProcessor.hpp */,
+				515CFE7B28CC199100861D32 /* SQLStatements.cpp */,
+				515CFE5628CC199100861D32 /* SQLStatements.hpp */,
+				515CFE5F28CC199100861D32 /* Statement.cpp */,
+				515CFE7528CC199100861D32 /* Statement.hpp */,
+				515CFE6828CC199100861D32 /* Storage.cpp */,
+				515CFE8128CC199100861D32 /* Storage.hpp */,
+				515CFE7728CC199100861D32 /* TestAutomatic.hpp */,
+				515CFE5428CC199100861D32 /* TestManually.hpp */,
+				515CFE6028CC199100861D32 /* TestSequencer.hpp */,
+				515CFE6628CC199100861D32 /* Timer.hpp */,
+				515CFE7928CC199100861D32 /* Tokenizer.cpp */,
+				515CFE7328CC199100861D32 /* Tokenizer.hpp */,
+				515CFE5D28CC199100861D32 /* TokenSequencer.cpp */,
+				515CFE6728CC199100861D32 /* TokenSequencer.hpp */,
+				515CFE5A28CC199100861D32 /* ValueType.h */,
+				515CFE8228CC199100861D32 /* View.hpp */,
+				515CFE4428CC198200861D32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		515CFE4428CC198200861D32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				515CFE4328CC198200861D32 /* Database */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		515CFE4228CC198200861D32 /* Database */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 515CFE4A28CC198200861D32 /* Build configuration list for PBXNativeTarget "Database" */;
+			buildPhases = (
+				515CFE3F28CC198200861D32 /* Sources */,
+				515CFE4028CC198200861D32 /* Frameworks */,
+				515CFE4128CC198200861D32 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Database;
+			productName = Database;
+			productReference = 515CFE4328CC198200861D32 /* Database */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		515CFE3B28CC198200861D32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					515CFE4228CC198200861D32 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 515CFE3E28CC198200861D32 /* Build configuration list for PBXProject "Database" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 515CFE3A28CC198200861D32;
+			productRefGroup = 515CFE4428CC198200861D32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				515CFE4228CC198200861D32 /* Database */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		515CFE3F28CC198200861D32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				515CFE8B28CC199100861D32 /* Attribute.cpp in Sources */,
+				515CFE9D28CC199100861D32 /* Database.cpp in Sources */,
+				515CFE9E28CC199100861D32 /* Application.cpp in Sources */,
+				515CFE8928CC199100861D32 /* DBQuery.cpp in Sources */,
+				515CFE9528CC199100861D32 /* DBProcessor.cpp in Sources */,
+				515CFE9728CC199100861D32 /* DBStatements.cpp in Sources */,
+				515CFE8E28CC199100861D32 /* makefile in Sources */,
+				515CFE9628CC199100861D32 /* main.cpp in Sources */,
+				515CFE9A28CC199100861D32 /* SQLStatements.cpp in Sources */,
+				515CFE9428CC199100861D32 /* BlockIO.cpp in Sources */,
+				515CFE9228CC199100861D32 /* Storage.cpp in Sources */,
+				515CFE9128CC199100861D32 /* Filters.cpp in Sources */,
+				515CFE9828CC199100861D32 /* Tokenizer.cpp in Sources */,
+				515CFE9C28CC199100861D32 /* ParseHelper.cpp in Sources */,
+				515CFE8D28CC199100861D32 /* Statement.cpp in Sources */,
+				515CFE8A28CC199100861D32 /* CmdProcessor.cpp in Sources */,
+				515CFE9028CC199100861D32 /* Faked.cpp in Sources */,
+				515CFE8C28CC199100861D32 /* TokenSequencer.cpp in Sources */,
+				515CFE9928CC199100861D32 /* Entity.cpp in Sources */,
+				515CFE9328CC199100861D32 /* Index.cpp in Sources */,
+				515CFE9B28CC199100861D32 /* Row.cpp in Sources */,
+				515CFE8F28CC199100861D32 /* SQLProcessor.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		515CFE4828CC198200861D32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		515CFE4928CC198200861D32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		515CFE4B28CC198200861D32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PUAS8D5Y3R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		515CFE4C28CC198200861D32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PUAS8D5Y3R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		515CFE3E28CC198200861D32 /* Build configuration list for PBXProject "Database" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				515CFE4828CC198200861D32 /* Debug */,
+				515CFE4928CC198200861D32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		515CFE4A28CC198200861D32 /* Build configuration list for PBXNativeTarget "Database" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				515CFE4B28CC198200861D32 /* Debug */,
+				515CFE4C28CC198200861D32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 515CFE3B28CC198200861D32 /* Project object */;
+}
