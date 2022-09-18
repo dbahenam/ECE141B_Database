@@ -19,13 +19,6 @@ namespace ECE141 {
   
   using Comparitor = bool (*)(Value &aLHS, Value &aRHS);
 
-//enum class Operators {
-//  equal_op=1, notequal_op, lt_op, lte_op, gt_op, gte_op, between_op,
-//  or_op, nor_op, and_op, not_op, dot_op,
-//  add_op, subtract_op, multiply_op, divide_op, power_op, mod_op,
-//  unknown_op
-//};
-
   static std::map<Operators, Comparitor> comparitors {
     {Operators::equal_op, Compare::equals},
 	//STUDENT: Add more for other operators...

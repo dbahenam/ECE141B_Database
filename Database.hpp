@@ -36,7 +36,7 @@ namespace ECE141 {
 	std::string getPath(){return theDBPath;}
 	bool setName(std::string aName);
 	std::string getName(){return name;}
-	
+	void closeStream(){stream.close();}
 	/* Load Data */
 	StatusResult loadEntities();
 	StatusResult loadRows();

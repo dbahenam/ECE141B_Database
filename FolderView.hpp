@@ -165,6 +165,73 @@ class ShowDBView : public FolderView {
 		FolderReader  reader;
 		const char* extension;
 };
+/* Lazy Loaded View, Dynamically changing with Entity as Delagate*/
+class TableDescriptionView : public FolderView{
+  public:
+	TableDescriptionView(Entity& anEntity, std::ostream& anOutput) : theOutput(anOutput), theEntity{anEntity}{}
+	std::vector<int> findLengths(AttributeList& aList){
+	  std::vector<int> lengths;
+	  std::vector<std::string> temp;
+	  int max;
+	  for(int i = 0; i < 4; i++){
+		max = 0;
+		for(int j = 0; j < aList.size(); j++){
+		  if(aList[j].getInfo()[i].size() > max){
+			max = aList[j].getInfo()[i].size();
+		  }
+		}
+		if(max < 4){max = 5;}
+		lengths.push_back(max);
+	  }
+	  return lengths;
+	}
+	void setHeader(){
+	  sections = findLengths(theEntity.attributes);
+	  int filler = 3;
+	  for(int i = 0; i < sections.size(); i++){
+		if(i == sections.size() -1){
+		  theHeader << std::setfill('-') << plus << std::setw(sections[i] + filler + 1);
+		}
+		else{
+		  theHeader << std::setfill('-') << plus << std::setw(sections[i] + filler);
+		}
+	  }
+	  theHeader << "+\n";
+	  theOutput << theHeader.str();
+	  for(int i = 0; i < sections.size(); i++){
+		if(i == sections.size() -1){
+		  theOutput << std::setfill(' ') << seperator << space << attributeField[i] << space << std::setw(sections[i] - attributeField[i].size()) << space;
+		}
+		else{
+		  theOutput << std::setfill(' ') << seperator << space << attributeField[i] << space << std::setw(sections[i] - attributeField[i].size()) << space;
+		}
+	  }
+	  theOutput << "|\n" << theHeader.str();
+	}
+  void show(){
+	setHeader();
+	std::string aField;
+	int filler = 1;
+	for(int i = 0; i < theEntity.attributes.size(); i++){
+	  for(int j = 0; j < sections.size(); j++){
+		aField = theEntity.attributes[i].getInfo()[j];
+		theOutput << seperator << space << aField << std::setw(sections[j] + filler - aField.size()) << space;
+	  }
+	  theOutput << "|\n";
+	}
+	theOutput << theHeader.str();
+  }
+  protected:
+	std::ostream& theOutput;
+	Entity& theEntity;
+	std::vector<std::string> attributeField = {"Field", "Type", "NULL", "Key", "AutoIncrement", "Extra"};
+	std::vector<int> sections;
+	std::string plus = "+";
+	std::string seperator = "|";
+	std::string space = " ";
+	std::stringstream theHeader;
+	int width = 17;
+};
 
   class TabularView : public FolderView{ // select rows
   public:

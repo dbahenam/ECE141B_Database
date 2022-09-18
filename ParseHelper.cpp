@@ -162,7 +162,11 @@ namespace ECE141 {
 	std::string attributeName = "";
 	while(tokenizer.more() && currentToken.data != ")"){
 	 // std::cout << currentToken.data << std::endl;
-	  if(currentToken.type == TokenType::identifier){
+	  if(currentToken.keyword == Keywords::from_kw){
+		tokenizer.next(1);
+		break;
+	  }
+	  else if(currentToken.type == TokenType::identifier){
 		attributeName = currentToken.data;
 		aList.push_back(attributeName);
 	  }

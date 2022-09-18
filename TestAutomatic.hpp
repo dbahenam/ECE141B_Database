@@ -16,7 +16,7 @@
 #include <random>
 
 #include "Application.hpp"
-#include "AboutUs.hpp"
+//#include "AboutUs.hpp"
 #include "Errors.hpp"
 #include "Config.hpp"
 #include "FolderReader.hpp"
@@ -155,16 +155,16 @@ namespace ECE141 {
       anOutput << " user_id int);\n";
     }
     
-    bool doCompileTest() {
-      AboutUs theAbout;
-      auto theCount=theAbout.getTeamSize();
-      std::vector<std::string> theNames;
-      for(size_t i=0;i<theCount;i++) {
-        if(auto theName=theAbout.getName(i))
-          theNames.push_back(*theName);
-      }
-      return theNames.size()>0;
-    }
+//    bool doCompileTest() {
+//      AboutUs theAbout;
+//      auto theCount=theAbout.getTeamSize();
+//      std::vector<std::string> theNames;
+//      for(size_t i=0;i<theCount;i++) {
+//        if(auto theName=theAbout.getName(i))
+//          theNames.push_back(*theName);
+//      }
+//      return theNames.size()>0;
+//    }
 
     bool doScriptTest(std::istream &anInput, std::ostream &anOutput) {
       ECE141::Application   theApp(anOutput);

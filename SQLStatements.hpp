@@ -96,9 +96,13 @@ class SelectRowStatement : public SQLStatement {
 		virtual StatusResult  parse();
 		virtual StatusResult  dispatchCall();
 		SQLProcessor* theSQLProc;
+  
 		std::string theTableName;
+		StringList theKeys;
+		ValueList theValues;
 		DBQuery theQuery;
 		RowList theRows;
+		Database* currentDB = nullptr;
 };
   /* Final Portion */
 //  class AlterTableStatement : public SQLStatement{

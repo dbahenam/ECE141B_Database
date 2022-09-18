@@ -34,7 +34,7 @@ int main(int argc, const char * argv[]) {
     using TestCall = std::function<bool()>;
     static std::map<std::string, TestCall> theCalls {
       {"App",         [&](){return theTests.doAppTest();}  },
-      {"Compile",     [&](){return theTests.doCompileTest();}  },
+//      {"Compile",     [&](){return theTests.doCompileTest();}  },
       {"Reader",      [&](){return theTests.doReaderTest();}  },
       {"DBCommands",  [&](){return theTests.doDBCommandsTest();}  },
       {"Tables",      [&](){return theTests.doTablesTest();}  },

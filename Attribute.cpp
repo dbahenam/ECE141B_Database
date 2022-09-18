@@ -91,6 +91,12 @@ namespace ECE141 {
   Attribute& Attribute::setNullable(bool aNullable) {
     nullable=aNullable; return *this;
   }
+
+  StringList Attribute::getInfo(){
+	StringList theInfo {name, DataNames[type], getNullable(), getKey()};
+	return theInfo;
+  }
+
   std::string Attribute::getNullable(){
 	if(nullable == true){
 	  return "Yes";

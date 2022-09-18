@@ -57,7 +57,7 @@ static std::map<DataTypes, std::string> DataNames{
     uint16_t      primary : 1;
     uint16_t      nullable: 1;
     //Others?
-
+	
   public:
           
     Attribute(DataTypes aType=DataTypes::no_type);
@@ -81,16 +81,18 @@ static std::map<DataTypes, std::string> DataNames{
     DataTypes           getType() const {return type;}
     size_t              getSize() const {return size;}
     Value               toValue(const std::string &aValue) const;
-
+	
     bool                isPrimaryKey() const {return primary;}
     bool                isNullable() const {return nullable;}
     bool                isAutoIncrement() const {return autoIncrement;}    
+	
+	StringList getInfo();
 	
 	void encode(std::ostream &aStream);
 	void decode(std::istream &aStream);
 	
 	Attribute attributeParsing(Tokenizer &aTokenizer);
-    void                reset(){
+    void reset(){
         name ="";
         type = DataTypes::no_type;
         size = 10; //max=1000

@@ -31,6 +31,7 @@ namespace ECE141 {
 
   Database::Database(const std::string aName, OpenDB)
     : name(aName), theStorage(stream), changed(false) {
+	  stream.close();
       theDBPath = Config::getDBPath(name);
 	  stream.open(theDBPath.c_str(), std::ios::binary | std::ios::in | std::ios::out);
 	  stream.seekg(0, std::ios::beg);
@@ -39,7 +40,7 @@ namespace ECE141 {
 
   Database::~Database() {
     if(changed) {
-      //stuff to save?
+      
     }
   }
   StatusResult Database::loadEntities(){
@@ -149,35 +150,11 @@ namespace ECE141 {
 	StatusResult theResult{noError};
 	Timer timer;
 	double timeElapsed;
-	std::string bar = "|";
-	std::string dashes = "--------";
-	std::string plus = "+";
-	std::string header = plus+dashes+plus+dashes+dashes+plus+dashes+plus+dashes+plus+dashes+plus+dashes+plus;
-	std::cout << header << "\n";
-	std::cout << bar << " Field" << std::right << std::setw(3);
-	std::cout << bar << " Type" << std::right << std::setw(12);
-	std::cout << bar << " Null" << std::right << std::setw(4);
-	std::cout << bar << " Key" << std::right << std::setw(5);
-	std::cout << bar << " Default" << std::right << std::setw(1);
-	std::cout << bar << " Extra" << std::right << std::setw(3) << bar << "\n";
-	std::cout << header << "\n";
-	timer.reset();
-	size_t counter = 0;
-	for(Entity anEntity : DBEntities){
-	  if(anEntity.getName() == aName){
-		//call view
-		for(Attribute anAttr : anEntity.attributes){
-		  anOutput << std::left << std::setw(4) << "| " << anAttr.getName() << std::right << std::setw(6);
-		  anOutput << std::left << std::setw(4) << "| " << anAttr.getTypeName() << std::right << std::setw(15);
-		  anOutput << std::left << std::setw(4) << "| " << anAttr.getNullable() << std::right << std::setw(8);
-		  anOutput << std::left << std::setw(4) << "| " << anAttr.getKey() << std::right << std::setw(8) << "\n";
-		  counter++;
-		}
-	  }
-	}
+	Entity anEntity = getEntity(aName);
+	TableDescriptionView aView(anEntity, anOutput);
+	aView.show();
 	timeElapsed = timer.elapsed();
-	//size_t rows = DBEntities.size();
-	anOutput << counter << " rows in set (" << timeElapsed << ")" << "\n";
+	anOutput << anEntity.attributes.size() << " rows in set (" << timeElapsed << " sec.)\n";
 	return theResult;
   }
 
@@ -233,7 +210,6 @@ namespace ECE141 {
 		aRowList.push_back(aRow);
 	  }
 	}
-	//aQuery.filter
 	TabularView aSelectView(anOutput, aRowList);
 	aSelectView.show(aRowList);
 	return theResult;

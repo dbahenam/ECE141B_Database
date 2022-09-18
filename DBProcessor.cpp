@@ -31,6 +31,9 @@ namespace ECE141 {
   }
   
   DBProcessor::~DBProcessor() {
+	if(currentDB){
+	  delete currentDB;
+	}
   }
 //--------- Recognize commands
 
@@ -213,7 +216,8 @@ bool DBProcessor::recognizeDump(Tokenizer &aTokenizer){
 	  }
 	}
 	else if(fs::exists(thePath)){
-		currentDB = new Database(aName, OpenDB());
+	  //currentDB->closeStream();
+	  currentDB = new Database(aName, OpenDB{});
 		output << "Database changed\n";
 		return theResult;
 	}

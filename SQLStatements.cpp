@@ -122,7 +122,9 @@ namespace ECE141{
   StatusResult insertRowStatement::dispatchCall(){
 	return theSQLProc->insertRows(theTableName, theRows);
   }
-  SelectRowStatement::SelectRowStatement(SQLProcessor* aSQLProc, Tokenizer& aTokenizer) : theSQLProc(aSQLProc), theTokenizer(aTokenizer){}
+  SelectRowStatement::SelectRowStatement(SQLProcessor* aSQLProc, Tokenizer& aTokenizer) : theSQLProc(aSQLProc), theTokenizer(aTokenizer){
+	currentDB = aSQLProc->getCurrentDB();
+  }
   StatusResult SelectRowStatement::parse(){
 	StatusResult theResult{noError};
 	//SELECT * from Users;
@@ -130,24 +132,15 @@ namespace ECE141{
 	//Select last_name, email from Users Order By age;
 	//Select last_name, email from Users Limit 5;
 	ParseHelper parseHelper(theTokenizer);
-
-	if(parseHelper.parseStar()){
-	  // validate table name
-	  theTableName = theTokenizer.current().data;
-	  theTokenizer.next();
-	  if(theTokenizer.current().data == ";"){
-		Database* currentDB = theSQLProc->getCurrentDB();
-		Entity theEntity = currentDB->getEntity(theTableName);
-		theQuery.setEntity(theEntity);
-		theQuery.setTableName(theTableName);
-	  }
-	  else{
-		parseHelper.parseClause(theTokenizer.current().keyword);
-	  }
-	}
-	else if(false ){
-	  
-	}
+	// parsehelper get stringlist of attributes
+	parseHelper.parseKeyList(theKeys);
+	theTableName = theTokenizer.current().data;
+	theTokenizer.next(1);
+	
+	parseHelper.parseValueList(theValues);
+	theQuery.EntityName = theTableName;
+	theQuery.theEntity = currentDB->getEntity(theTableName);
+	theQuery.Select(theKeys);
 	return theResult;
   }
   StatusResult SelectRowStatement::dispatchCall(){
