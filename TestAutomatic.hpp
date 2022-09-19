@@ -243,7 +243,7 @@ namespace ECE141 {
         TestSequencer theSeq(theTokenizer);
         int theValue{0};
         while(theTokenizer.more()) {
-		  std::cout << theTokenizer.current().data << "\n";
+		  //std::cout << theTokenizer.current().data << "\n";
           if(theSeq.clear().nextIs(createDB)) {
             if(theSeq.skip(2).nextIs({Keywords::query_kw}).skip(2)) {
               theSeq.getNumber(theValue).skip(7);

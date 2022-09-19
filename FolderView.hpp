@@ -110,6 +110,7 @@ public:
 		}
 		else{
 		  theID = aBlock.header.key;
+		  extra = "";
 		}
 		anOutput << "| " << std::left << std::setw(width-3) << theType << space;
 		anOutput << "| " << std::left << std::setw(width-3) << theID << space;
@@ -173,14 +174,14 @@ class TableDescriptionView : public FolderView{
 	  std::vector<int> lengths;
 	  std::vector<std::string> temp;
 	  int max;
-	  for(int i = 0; i < 4; i++){
+	  for(int i = 0; i < attributeField.size(); i++){
 		max = 0;
 		for(int j = 0; j < aList.size(); j++){
 		  if(aList[j].getInfo()[i].size() > max){
 			max = aList[j].getInfo()[i].size();
 		  }
 		}
-		if(max < 4){max = 5;}
+		if(max < attributeField.size()){max = attributeField.size() + 1;}
 		lengths.push_back(max);
 	  }
 	  return lengths;
@@ -189,7 +190,7 @@ class TableDescriptionView : public FolderView{
 	  sections = findLengths(theEntity.attributes);
 	  int filler = 3;
 	  for(int i = 0; i < sections.size(); i++){
-		if(i == sections.size() -1){
+		if(i == sections.size() - 1){
 		  theHeader << std::setfill('-') << plus << std::setw(sections[i] + filler + 1);
 		}
 		else{
@@ -224,7 +225,7 @@ class TableDescriptionView : public FolderView{
   protected:
 	std::ostream& theOutput;
 	Entity& theEntity;
-	std::vector<std::string> attributeField = {"Field", "Type", "NULL", "Key", "AutoIncrement", "Extra"};
+	std::vector<std::string> attributeField = {"Field", "Type", "NULL", "Key"}; // can add autoincrement, extra
 	std::vector<int> sections;
 	std::string plus = "+";
 	std::string seperator = "|";

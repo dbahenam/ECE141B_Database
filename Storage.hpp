@@ -35,17 +35,18 @@ namespace ECE141 {
 
 using BlockList = std::deque<uint32_t>;
 using BlockVisitor = std::function<bool(const Block&, uint32_t)>;
-struct BlockIterator{
-  virtual bool each(const BlockVisitor)=0;
-};
+//struct BlockIterator{
+//  virtual bool each(const BlockVisitor)=0;
+//};
 
   // USE: A storage class, might be helpful...
-  class Storage : public BlockIO, public BlockIterator {
+  class Storage : public BlockIO {
   public:
 	  Storage(std::iostream& aStream);
 	  bool isAvailable(const std::string &aName);
-	  bool each(Block& aBlock, uint32_t aBlockNum);
-	  bool each(const BlockVisitor){return false;} // fix
+	  StatusResult freeBlock(uint32_t &aHashID);
+	  //bool each(Block& aBlock, uint32_t aBlockNum);
+	  bool each(const BlockVisitor& aVisitor); // fix
 	  uint32_t getBlockID();
 	
 	  blockList 	storageBlocks;

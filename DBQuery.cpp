@@ -2,7 +2,7 @@
 //  DBQuery.cpp
 //  
 //
-//  Created by David Bahena Moctezuma on 5/25/22.
+//  Created by David Bahena Moctezuma
 //
 
 #include "DBQuery.hpp"

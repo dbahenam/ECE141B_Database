@@ -107,19 +107,33 @@ namespace ECE141 {
   }
 
   StatusResult Database::dropTable(const std::string &aName, std::ostream& anOutput){
-	// theStorage.drop table
 	StatusResult theResult{noError};
 	Timer timer;
 	double timeElapsed;
 	timer.reset();
 	size_t numRows = 0;
+	uint32_t theHashID;
+	// delete entity from vector
 	for(std::vector<Entity>::iterator it = DBEntities.begin(); it != DBEntities.end(); ++it){
 	  if(it->getName() == aName){
+		  //theResult = theStorage.freeBlock(it->getHashID());
+		  theHashID = it->getHashID();
 		  DBEntities.erase(it);
 		  numRows++;
 		  break;
 	  }
 	}
+	theStorage.each([&](const Block& aBlock, uint32_t aBlockNum) {
+	  if (aBlock.header.type == 'E' || aBlock.header.type == 'D') {
+		if(aBlock.header.hashID == theHashID){
+		  Block theBlock;
+		  theBlock.header.type = 'F';
+		  theStorage.writeBlock(aBlockNum, theBlock);
+		  return true;
+		}
+	  }
+	  return false;
+	  });
 	timeElapsed = timer.elapsed();
 	if(theResult.error == noError){
 	  anOutput << "Query OK, " << numRows <<  " rows affected (" << timeElapsed << "sec)\n";

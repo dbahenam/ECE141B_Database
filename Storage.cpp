@@ -28,12 +28,24 @@ namespace ECE141 {
 	}
 	return true;
   }
-  bool Storage::each(Block& aBlock, uint32_t aBlockNum) {
-	  if(readBlock(aBlockNum,aBlock).error == noError){
+  bool Storage::each(const BlockVisitor& aVisitor){
+	auto size = getBlockCount();
+	Block theBlock;
+	for(int i = 0; i < size; i++){
+	  if(readBlock(i, theBlock)){
+		if(aVisitor(theBlock, i)){
 		  return true;
+		}
 	  }
-	  return false;
+	}
+	return false;
   }
+//  bool Storage::each(Block& aBlock, uint32_t aBlockNum) {
+//	  if(readBlock(aBlockNum,aBlock).error == noError){
+//		  return true;
+//	  }
+//	  return false;
+//  }
   void Storage::setIndex(){
 	uint32_t counter = 0;
 	for(Block aBlock : storageBlocks){

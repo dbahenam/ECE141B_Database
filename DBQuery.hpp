@@ -2,7 +2,7 @@
 //  DBQuery.hpp
 //  
 //
-//  Created by David Bahena Moctezuma on 5/25/22.
+//  Created by David Bahena Moctezuma
 //
 
 #ifndef DBQuery_hpp
